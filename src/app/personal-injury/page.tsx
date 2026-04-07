@@ -35,7 +35,7 @@ export default function PersonalInjuryPage() {
       <section className="relative min-h-[85vh] flex items-center text-white overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80')" }} />
-        <div className="absolute inset-0 bg-[#0f2d1c]/78" />
+        <div className="absolute inset-0 bg-[#0d3d6e]/78" />
         <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
@@ -45,16 +45,16 @@ export default function PersonalInjuryPage() {
 
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
               Seattle Auto<br />Accident<br />
-              <span className="text-green-200">Chiropractor</span>
+              <span className="text-blue-200">Chiropractor</span>
             </h1>
 
-            <p className="text-lg text-green-100 mb-6 leading-relaxed">
+            <p className="text-lg text-blue-100 mb-6 leading-relaxed">
               Many crash injuries don&apos;t show symptoms for days — or longer. We specialize in diagnosing and treating auto accident injuries without surgery, and we work directly with your insurance.
             </p>
 
             <div className="bg-white/10 border border-white/20 rounded-2xl p-4 mb-8 backdrop-blur-sm flex items-start gap-3">
               <Clock size={18} className="text-yellow-300 shrink-0 mt-0.5" />
-              <div className="text-sm text-green-100">
+              <div className="text-sm text-blue-100">
                 <span className="font-semibold text-white">Time matters after an accident.</span> Washington state gives you 3 years to file a claim, but the sooner treatment begins, the better your recovery — and the stronger your documentation.
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function PersonalInjuryPage() {
                 </div>
                 <div>
                   <div className="font-semibold text-white">{label}</div>
-                  <div className="text-sm text-green-200">{sub}</div>
+                  <div className="text-sm text-blue-200">{sub}</div>
                 </div>
               </div>
             ))}
@@ -115,7 +115,7 @@ export default function PersonalInjuryPage() {
       {/* COMMON INJURIES */}
       <section className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <div className="text-center mb-12">
-          <div className="text-sm font-semibold text-[#1E4D35] uppercase tracking-wider mb-2">What We Treat</div>
+          <div className="text-sm font-semibold text-[#1A5FA8] uppercase tracking-wider mb-2">What We Treat</div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Common Auto Accident Injuries</h2>
           <p className="text-gray-500 mt-3 max-w-xl mx-auto">
             These injuries respond well to chiropractic care, massage, and rehabilitation — without surgery or heavy medication.
@@ -125,8 +125,8 @@ export default function PersonalInjuryPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {injuries.map(({ title, desc }) => (
             <div key={title} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-              <div className="w-8 h-8 bg-[#EAF4EE] rounded-lg flex items-center justify-center mb-3">
-                <CheckCircle size={16} className="text-[#1E4D35]" />
+              <div className="w-8 h-8 bg-[#E8F4FB] rounded-lg flex items-center justify-center mb-3">
+                <CheckCircle size={16} className="text-[#1A5FA8]" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
               <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
@@ -138,10 +138,10 @@ export default function PersonalInjuryPage() {
       {/* MID-PAGE CTA */}
       <section className="relative py-16 px-4 overflow-hidden text-white">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1600&q=80')" }} />
-        <div className="absolute inset-0 bg-[#0f2d1c]/80" />
+        <div className="absolute inset-0 bg-[#0d3d6e]/80" />
         <div className="relative max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">Been in an accident? Get evaluated today.</h2>
-          <p className="text-green-200 mb-6">Early treatment protects your health and your claim. Same-week appointments available.</p>
+          <p className="text-blue-200 mb-6">Early treatment protects your health and your claim. Same-week appointments available.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="https://www.zocdoc.com"
@@ -166,7 +166,7 @@ export default function PersonalInjuryPage() {
       {/* HOW WE TREAT */}
       <section className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <div className="text-center mb-12">
-          <div className="text-sm font-semibold text-[#1E4D35] uppercase tracking-wider mb-2">Our Approach</div>
+          <div className="text-sm font-semibold text-[#1A5FA8] uppercase tracking-wider mb-2">Our Approach</div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">How We Treat Auto Injuries</h2>
           <p className="text-gray-500 mt-3 max-w-xl mx-auto">
             A comprehensive, non-surgical approach that addresses the root cause — not just the symptoms.
@@ -176,8 +176,8 @@ export default function PersonalInjuryPage() {
         <div className="grid sm:grid-cols-2 gap-6">
           {treatments.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="flex gap-5 bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-              <div className="w-12 h-12 bg-[#EAF4EE] rounded-xl flex items-center justify-center shrink-0">
-                <Icon size={22} className="text-[#1E4D35]" />
+              <div className="w-12 h-12 bg-[#E8F4FB] rounded-xl flex items-center justify-center shrink-0">
+                <Icon size={22} className="text-[#1A5FA8]" />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1.5">{title}</h3>
@@ -192,16 +192,16 @@ export default function PersonalInjuryPage() {
       <section className="bg-gray-50 py-16 md:py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="text-sm font-semibold text-[#1E4D35] uppercase tracking-wider mb-2">What to Expect</div>
+            <div className="text-sm font-semibold text-[#1A5FA8] uppercase tracking-wider mb-2">What to Expect</div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Your Path to Recovery</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map(({ icon: Icon, step, title, desc }) => (
               <div key={step} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm text-center">
-                <div className="text-4xl font-black text-[#EAF4EE] mb-3">{step}</div>
-                <div className="w-10 h-10 bg-[#EAF4EE] rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <Icon size={18} className="text-[#1E4D35]" />
+                <div className="text-4xl font-black text-[#E8F4FB] mb-3">{step}</div>
+                <div className="w-10 h-10 bg-[#E8F4FB] rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Icon size={18} className="text-[#1A5FA8]" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
@@ -215,7 +215,7 @@ export default function PersonalInjuryPage() {
       <section className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="text-sm font-semibold text-[#1E4D35] uppercase tracking-wider mb-2">Insurance & Billing</div>
+            <div className="text-sm font-semibold text-[#1A5FA8] uppercase tracking-wider mb-2">Insurance & Billing</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">We Work With Your Insurance</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
               We accept Personal Injury Protection (PIP), liability coverage, and most major health insurance plans. Our team handles the billing process so you can focus on recovery.
@@ -225,7 +225,7 @@ export default function PersonalInjuryPage() {
             </p>
             <a
               href="tel:2065239000"
-              className="inline-flex items-center gap-2 text-[#1E4D35] font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-[#1A5FA8] font-semibold hover:underline"
             >
               <Phone size={16} />
               Questions about coverage? Call (206) 523-9000
@@ -236,7 +236,7 @@ export default function PersonalInjuryPage() {
             {insurances.map((ins) => (
               <span
                 key={ins}
-                className="bg-[#EAF4EE] text-[#1E4D35] border border-green-100 rounded-full px-4 py-2 text-sm font-medium"
+                className="bg-[#E8F4FB] text-[#1A5FA8] border border-blue-100 rounded-full px-4 py-2 text-sm font-medium"
               >
                 {ins}
               </span>
@@ -248,10 +248,10 @@ export default function PersonalInjuryPage() {
       {/* FINAL CTA */}
       <section className="relative py-20 px-4 overflow-hidden text-white">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80')" }} />
-        <div className="absolute inset-0 bg-[#0f2d1c]/80" />
+        <div className="absolute inset-0 bg-[#0d3d6e]/80" />
         <div className="relative max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Don&apos;t let crash injuries become chronic pain.</h2>
-          <p className="text-green-200 mb-8 text-lg">
+          <p className="text-blue-200 mb-8 text-lg">
             The sooner you start treatment, the better your outcome. Book an assessment today — same-week availability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
