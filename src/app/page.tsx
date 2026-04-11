@@ -42,7 +42,7 @@ const reviews = [
 ];
 
 const insurances = [
-  "UW Regence Blue Cross","Aetna","Cigna","First Choice",
+  "Regence","Blue Cross/Blue Shield","Aetna","Cigna","First Choice",
   "Kaiser","Medicare","United Health Care","American Specialty Health","Premera Blue Cross",
 ];
 
