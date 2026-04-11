@@ -18,21 +18,21 @@ const PHOTOS = {
 };
 
 const services = [
-  { title: "Chiropractic Care",        desc: "Personalized spinal adjustments and corrective care plans designed around your specific pain and wellness goals.", href: "#",                  photo: PHOTOS.chiro    },
-  { title: "Massage Therapy",          desc: "Swedish, deep tissue, sports, prenatal, and trigger-point massage from Seattle's most skilled therapists.",        href: "#",                  photo: PHOTOS.massage  },
-  { title: "Acupuncture",              desc: "Traditional and modern acupuncture for pain relief, stress, energy, and whole-body balance.",                       href: "#",                  photo: PHOTOS.acupunc  },
-  { title: "Auto Accident Care",       desc: "Specialized treatment for whiplash, soft tissue injuries, and crash-related pain. We work with your insurance.",    href: "/personal-injury",   photo: PHOTOS.accident },
-  { title: "Functional Rehabilitation",desc: "Targeted rehab programs to restore strength, mobility, and function after injury or surgery.",                       href: "#",                  photo: PHOTOS.rehab    },
-  { title: "Red Light Therapy",        desc: "FDA-registered Prism Light Pod — 17,000 LEDs, 15-minute sessions to accelerate recovery and reduce inflammation.",  href: "#",                  photo: PHOTOS.rlt      },
+  { title: "Chiropractic Care",        desc: "Personalized spinal adjustments and corrective care plans designed around your specific pain and wellness goals.", href: "/services/chiropractic",      photo: PHOTOS.chiro    },
+  { title: "Massage Therapy",          desc: "Swedish, deep tissue, sports, prenatal, and trigger-point massage from Seattle's most skilled therapists.",        href: "/services/massage-therapy",   photo: PHOTOS.massage  },
+  { title: "Acupuncture",              desc: "Traditional and modern acupuncture for pain relief, stress, energy, and whole-body balance.",                       href: "/services/acupuncture",       photo: PHOTOS.acupunc  },
+  { title: "Auto Accident Care",       desc: "Specialized treatment for whiplash, soft tissue injuries, and crash-related pain. We work with your insurance.",    href: "/personal-injury",            photo: PHOTOS.accident },
+  { title: "Functional Rehabilitation",desc: "Targeted rehab programs to restore strength, mobility, and function after injury or surgery.",                       href: "/services/sports-rehab",      photo: PHOTOS.rehab    },
+  { title: "Red Light Therapy",        desc: "FDA-registered Prism Light Pod — 17,000 LEDs, 15-minute sessions to accelerate recovery and reduce inflammation.",  href: "/services/red-light-therapy", photo: PHOTOS.rlt      },
 ];
 
 const team = [
-  { name: "Dr. John Chevigny", creds: "DC, CCSP, CSCS", role: "Chiropractor & Clinic Director" },
-  { name: "Dr. Gage Ford",     creds: "DC",              role: "Chiropractic Physician"         },
-  { name: "John (Wan) Nguyen", creds: "EAMP",            role: "Acupuncturist"                  },
-  { name: "Ash Chima",         creds: "",                role: "Sports Medicine CPT"            },
-  { name: 'Mai Nguyen',        creds: "LMT",             role: "Massage Therapist"              },
-  { name: "Natalie George",    creds: "LMT",             role: "Holistic Health Practitioner"   },
+  { name: "Dr. John Chevigny", creds: "DC, CCSP, CSCS", role: "Chiropractor & Clinic Director",         photo: "/team/dr-john-chevigny.jpg" },
+  { name: "Dr. Gage Ford",     creds: "DC",              role: "Chiropractic Physician",                  photo: "/team/gage-ford.jpg"        },
+  { name: "John (Wan) Nguyen", creds: "EAMP",            role: "Acupuncturist",                           photo: "/team/john-nguyen.jpg"      },
+  { name: "Ash Chima",         creds: "ACSM-CPT",        role: "Sports Medicine CPT & Massage Therapist", photo: "/team/ash-chima.jpg"        },
+  { name: "Mai Nguyen",        creds: "LMT",             role: "Massage Therapist",                       photo: "/team/mai-nguyen.jpg"       },
+  { name: "Natalie George",    creds: "LMT",             role: "Massage Therapist",                       photo: "/team/natalie-george.jpg"   },
 ];
 
 const reviews = [
@@ -201,17 +201,19 @@ export default function Home() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {team.map(({ name, creds, role }) => (
-            <div key={name} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm text-center hover:shadow-md transition-shadow">
-              <div className="w-16 h-16 bg-[#E8F4FB] rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Users size={28} className="text-[#1A5FA8]" />
+          {team.map(({ name, creds, role, photo }) => (
+            <Link key={name} href="/team" className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm text-center hover:shadow-md transition-shadow group">
+              <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+                <img src={photo} alt={name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
               </div>
               <div className="font-semibold text-gray-900">{name}{creds && <span className="text-[#1A5FA8]">, {creds}</span>}</div>
               <div className="text-sm text-gray-500 mt-1">{role}</div>
-            </div>
+            </Link>
           ))}
         </div>
-        <p className="text-center text-sm text-gray-400 mt-8">Full bios &amp; provider photos coming soon.</p>
+        <div className="text-center mt-8">
+          <Link href="/team" className="text-[#1A5FA8] font-semibold text-sm hover:underline">Meet the full team & read bios →</Link>
+        </div>
       </section>
 
       {/* ── REVIEWS ── */}

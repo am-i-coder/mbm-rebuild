@@ -32,9 +32,10 @@ export default function Nav() {
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
             <Link href="/#services" className="hover:text-[#1A5FA8] transition-colors">Services</Link>
             <Link href="/personal-injury" className="hover:text-[#1A5FA8] transition-colors">Auto Accident</Link>
-            <Link href="/#team" className="hover:text-[#1A5FA8] transition-colors">Our Team</Link>
-            <Link href="/#insurance" className="hover:text-[#1A5FA8] transition-colors">Insurance</Link>
-            <Link href="/#reviews" className="hover:text-[#1A5FA8] transition-colors">Reviews</Link>
+            <Link href="/team" className="hover:text-[#1A5FA8] transition-colors">Our Team</Link>
+            <Link href="/insurance" className="hover:text-[#1A5FA8] transition-colors">Insurance</Link>
+            <Link href="/faq" className="hover:text-[#1A5FA8] transition-colors">FAQ</Link>
+            <Link href="/contact" className="hover:text-[#1A5FA8] transition-colors">Contact</Link>
             <a
               href="https://www.zocdoc.com"
               target="_blank"
@@ -56,9 +57,10 @@ export default function Nav() {
           <div className="md:hidden border-t border-gray-100 bg-white px-4 pb-4 flex flex-col gap-3 text-sm font-medium text-gray-700">
             <Link href="/#services" onClick={() => setOpen(false)} className="pt-3 hover:text-[#1A5FA8]">Services</Link>
             <Link href="/personal-injury" onClick={() => setOpen(false)} className="hover:text-[#1A5FA8]">Auto Accident</Link>
-            <Link href="/#team" onClick={() => setOpen(false)} className="hover:text-[#1A5FA8]">Our Team</Link>
-            <Link href="/#insurance" onClick={() => setOpen(false)} className="hover:text-[#1A5FA8]">Insurance</Link>
-            <Link href="/#reviews" onClick={() => setOpen(false)} className="hover:text-[#1A5FA8]">Reviews</Link>
+            <Link href="/team" onClick={() => setOpen(false)} className="hover:text-[#1A5FA8]">Our Team</Link>
+            <Link href="/insurance" onClick={() => setOpen(false)} className="hover:text-[#1A5FA8]">Insurance</Link>
+            <Link href="/faq" onClick={() => setOpen(false)} className="hover:text-[#1A5FA8]">FAQ</Link>
+            <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#1A5FA8]">Contact</Link>
             <a
               href="https://www.zocdoc.com"
               target="_blank"
